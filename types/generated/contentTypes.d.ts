@@ -526,6 +526,7 @@ export interface ApiDevocionalDevocional extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
     Reflexion: Schema.Attribute.String;
+    Tema: Schema.Attribute.String & Schema.Attribute.Required;
     Titulo: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -578,8 +579,7 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    Audio: Schema.Attribute.Media<'files' | 'audios'> &
-      Schema.Attribute.Required;
+    Audio: Schema.Attribute.Media<'files' | 'audios'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -602,6 +602,7 @@ export interface ApiPodcastPodcast extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Url: Schema.Attribute.String;
   };
 }
 

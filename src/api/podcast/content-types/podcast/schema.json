@@ -27,7 +27,7 @@
     "Audio": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "files",
         "audios"
@@ -37,6 +37,9 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::devocional.devocional"
+    },
+    "Url": {
+      "type": "string"
     }
   }
 }
