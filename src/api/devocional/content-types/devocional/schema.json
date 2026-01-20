@@ -15,6 +15,15 @@
       "type": "string",
       "required": true
     },
+    "Tema": {
+      "type": "string",
+      "required": true
+    },
+    "Fecha": {
+      "type": "date",
+      "required": true,
+      "unique": true
+    },
     "Capitulo": {
       "type": "string",
       "required": true
@@ -25,11 +34,6 @@
     },
     "Reflexion": {
       "type": "string"
-    },
-    "Fecha": {
-      "type": "date",
-      "required": true,
-      "unique": true
     }
   }
 }
