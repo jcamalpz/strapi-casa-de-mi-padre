@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "podcasts",
+  "info": {
+    "singularName": "podcast",
+    "pluralName": "podcasts",
+    "displayName": "Podcast"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "Descripcion": {
+      "type": "text"
+    },
+    "Fecha": {
+      "type": "date",
+      "required": true,
+      "unique": true
+    },
+    "Audio": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "audios"
+      ]
+    },
+    "devocional": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::devocional.devocional"
+    }
+  }
+}
